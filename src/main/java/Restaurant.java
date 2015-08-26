@@ -1,5 +1,6 @@
 import java.util.List;
 import org.sql2o.*;
+import java.util.Arrays;
 
 public class Restaurant {
   private int id;
@@ -39,7 +40,7 @@ public class Restaurant {
 
 
   public static List<Restaurant> all() {
-    String sql = "SELECT id, restName, cuisineId FROM Restaurants";
+    String sql = "SELECT id, restName, cuisineId FROM restaurants";
     try(Connection con = DB.sql2o.open()) {
       return con.createQuery(sql).executeAndFetch(Restaurant.class);
     }
@@ -47,7 +48,7 @@ public class Restaurant {
 
   public void save() {
     try(Connection con = DB.sql2o.open()) {
-      String sql = "INSERT INTO Restaurants(restName, cuisineId) VALUES (:restName, :cuisineId)";
+      String sql = "INSERT INTO restaurants(restName, cuisineId) VALUES (:restName, :cuisineId)";
       this.id = (int) con.createQuery(sql, true)
         .addParameter("restName", restName)
         .addParameter("cuisineId", cuisineId)
@@ -58,7 +59,7 @@ public class Restaurant {
 
   public static Restaurant find(int id) {
     try(Connection con = DB.sql2o.open()) {
-      String sql = "SELECT * FROM Restaurants where id=:id";
+      String sql = "SELECT * FROM restaurants where id=:id";
       Restaurant restaurant = con.createQuery(sql)
         .addParameter("id", id)
         .executeAndFetchFirst(Restaurant.class);

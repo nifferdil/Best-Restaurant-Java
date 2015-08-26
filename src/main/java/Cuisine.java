@@ -51,7 +51,7 @@ public class Cuisine {
       Cuisine cuisine = con.createQuery(sql)
         .addParameter("id", id)
         .executeAndFetchFirst(Cuisine.class);
-      return Cuisine;
+      return cuisine;
     }
   }
 

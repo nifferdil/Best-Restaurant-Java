@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RestaurantTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2015-08-26T18:23:48" hostname="epicodus-103.local" time="0.086">
+  <properties/>
+  <testcase name="save_savesCuisineIdIntoDB_true" classname="RestaurantTest" time="0.021"/>
+  <testcase name="all_emptyAtFirst" classname="RestaurantTest" time="0.007"/>
+  <testcase name="equals_returnsTrueIfRestNamesAretheSame" classname="RestaurantTest" time="0.004"/>
+  <testcase name="find_findsRestaurantInDatabase_true" classname="RestaurantTest" time="0.014"/>
+  <testcase name="all_savesIntoDatabase_true" classname="RestaurantTest" time="0.012"/>
+  <testcase name="save_assignsIdToObject" classname="RestaurantTest" time="0.013"/>
+  <testcase name="save_returnsTrueIfRestNamesAretheSame" classname="RestaurantTest" time="0.013"/>
+  <system-out><![CDATA[1
+1
+1
+1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

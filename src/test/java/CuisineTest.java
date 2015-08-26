@@ -46,4 +46,7 @@ public class CuisineTest {
     Restaurant[] restaurants = new Restaurant[] { firstRestaurant, secondRestaurant };
     assertTrue(myCuisine.getRestaurants().containsAll(Arrays.asList(restaurants)));
   }
+
+
+
 }
