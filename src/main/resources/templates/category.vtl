@@ -1,0 +1,12 @@
+<h3>Here are all the tasks in this category:</h3>
+
+#foreach ($task in $category.getTasks())
+  #if($task.getDescription())
+    <h4>$task.getDescription()</h4>
+  #end
+#end
+
+<hr/>
+<a href="/categories/$category.getId()/tasks/new">Add a new task</a>
+<br>
+<a href="/">Return to Main Page</a>
